@@ -39,4 +39,8 @@ class SliderAdapter : PagerAdapter {
         return view
     }
 
+    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+        container!!.removeView(`object` as ConstraintLayout)
+    }
+
 }
