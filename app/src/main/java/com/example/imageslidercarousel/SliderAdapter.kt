@@ -22,20 +22,21 @@ class SliderAdapter : PagerAdapter {
         this.images = images
     }
 
-    override fun isViewFromObject(view: View, `object`: Any): Boolean =view ==  `object` as ConstraintLayout
+    override fun isViewFromObject(view: View, `object`: Any): Boolean =
+        view == `object` as ConstraintLayout
 
     override fun getCount(): Int {
         return images.size
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        var image:ImageView
-        inflater=context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        var view:View=inflater.inflate(R.layout.slider_image_item,container,false)
-        image=view.findViewById(R.id.slider_image)
+        var image: ImageView
+        inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        var view: View = inflater.inflate(R.layout.slider_image_item, container, false)
+        image = view.findViewById(R.id.slider_image)
         image.setBackgroundResource(images[position])
         container!!.addView(view)
-
+        return view
     }
 
 }
