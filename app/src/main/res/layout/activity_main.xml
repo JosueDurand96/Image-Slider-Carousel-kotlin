@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
         <TextView
@@ -20,7 +21,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="MIS FOTOS"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:textSize="35sp"
             android:textStyle="bold"
             android:visibility="visible" />
