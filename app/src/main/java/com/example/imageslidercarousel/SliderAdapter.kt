@@ -31,6 +31,7 @@ class SliderAdapter : PagerAdapter {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         var image:ImageView
         inflater=context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        var view:View=inflater.inflate(R.layout.slider_image_item,container,false)
 
     }
 
