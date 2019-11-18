@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
+import android.widget.LinearLayout
+
 import androidx.viewpager.widget.PagerAdapter
 class SliderAdapter : PagerAdapter {
 
@@ -19,7 +20,7 @@ class SliderAdapter : PagerAdapter {
         this.images = images
     }
 
-    override fun isViewFromObject(view: View, `object`: Any): Boolean = view == `object` as RelativeLayout
+    override fun isViewFromObject(view: View, `object`: Any): Boolean = view == `object` as LinearLayout
 
     override fun getCount(): Int {
         return images.size
@@ -36,7 +37,7 @@ class SliderAdapter : PagerAdapter {
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container.removeView(`object` as RelativeLayout)
+        container.removeView(`object` as LinearLayout)
     }
 
 }
