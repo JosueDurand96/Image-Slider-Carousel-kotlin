@@ -2,6 +2,8 @@ package com.example.imageslidercarousel
 
 import android.content.Context
 import android.view.View
+import android.widget.RelativeLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.PagerAdapter
 
 class SliderAdapter : PagerAdapter {
@@ -15,12 +17,10 @@ class SliderAdapter : PagerAdapter {
         this.images = images
     }
 
-    override fun isViewFromObject(view: View, `object`: Any): Boolean {
-
-    }
+    override fun isViewFromObject(view: View, `object`: Any): Boolean =view ==  `object` as ConstraintLayout
 
     override fun getCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return images.size
     }
 
 }
