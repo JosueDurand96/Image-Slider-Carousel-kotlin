@@ -33,6 +33,8 @@ class SliderAdapter : PagerAdapter {
         inflater=context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         var view:View=inflater.inflate(R.layout.slider_image_item,container,false)
         image=view.findViewById(R.id.slider_image)
+        image.setBackgroundResource(images[position])
+        container!!.addView(view)
 
     }
 
