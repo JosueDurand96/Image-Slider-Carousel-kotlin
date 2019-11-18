@@ -8,9 +8,9 @@ class SliderAdapter : PagerAdapter {
 
 
     var context: Context
-    var images: List<Int>
+    var images: Array<Int>
 
-    constructor(context: Context, var images: Array<Int>) : super() {
+    constructor(context: Context, images: Array<Int>) : super() {
         this.context = context
         this.images = images
     }
