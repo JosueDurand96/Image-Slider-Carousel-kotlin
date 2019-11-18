@@ -19,8 +19,7 @@ class SliderAdapter : PagerAdapter {
         this.images = images
     }
 
-    override fun isViewFromObject(view: View, `object`: Any): Boolean =
-        view == `object` as RelativeLayout
+    override fun isViewFromObject(view: View, `object`: Any): Boolean = view == `object` as RelativeLayout
 
     override fun getCount(): Int {
         return images.size
@@ -32,12 +31,12 @@ class SliderAdapter : PagerAdapter {
         var view: View = inflater.inflate(R.layout.slider_image_item, container, false)
         image = view.findViewById(R.id.slider_image)
         image.setBackgroundResource(images[position])
-        container!!.addView(view)
+        container.addView(view)
         return view
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container!!.removeView(`object` as RelativeLayout)
+        container.removeView(`object` as RelativeLayout)
     }
 
 }
