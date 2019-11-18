@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 
 import androidx.viewpager.widget.PagerAdapter
+
 class SliderAdapter : PagerAdapter {
 
     var context: Context
@@ -20,7 +21,8 @@ class SliderAdapter : PagerAdapter {
         this.images = images
     }
 
-    override fun isViewFromObject(view: View, `object`: Any): Boolean = view == `object` as LinearLayout
+    override fun isViewFromObject(view: View, `object`: Any): Boolean =
+        view == `object` as LinearLayout
 
     override fun getCount(): Int {
         return images.size
