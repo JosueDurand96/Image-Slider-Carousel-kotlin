@@ -10,8 +10,9 @@ class SliderAdapter : PagerAdapter {
     var context: Context
     var images: List<Int>
 
-    constructor(var context: Context, var images: Array<Int>) : super() {
-
+    constructor(context: Context, var images: Array<Int>) : super() {
+        this.context = context
+        this.images = images
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
